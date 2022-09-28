@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="gradingSystem.css">
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+
+</head>
+
+<body>
+ <center>
+    <section id="section">
+        <div>
+            <h4 class="px-3 py-4">I'KHALLY GRADING SYSTEM</h4>
+        </div>
+        <div id="data">
+            <label for="input"> INPUT SCORE</label>
+            <input type="text" id="scoreValue" placeholder="Enter Your Score">
+            <div id="show"></div>
+        </div>
+        <div> <button onclick="checkScore()" class="btn btn-outline-dark my-4">CHECK SCORE</button>
+        </div>
+    </section>
+
+
+    <script>
+        var maxScore = 100
+        function checkScore() {
+            var myScore = Number(scoreValue.value)
+
+            if (myScore >= 70 && myScore <= 100) {
+                show.innerHTML = ("EXCELLENT")
+            }
+
+            else if (myScore >= 60 && myScore <= 69) {
+                show.innerHTML = ("VERY GOOD")
+            }
+
+            else if (myScore >= 50 && myScore <= 59) {
+                show.innerHTML = ("GOOD")
+            }
+
+            else if (myScore >= 45 && myScore <= 49) {
+                show.innerHTML = ("AVERAGE")
+            }
+
+            else if (myScore >= 40 && myScore <= 44) {
+                show.innerHTML = ("PASS")
+            }
+
+            else if (myScore >= 1 && myScore <= 39) {
+                show.innerHTML = ("FAIL")
+            }
+            else if (myScore == "") {
+                show.innerHTML = (" input your score ")
+                //   show.style.backgroundColor = "red"
+            }
+            else {
+                show.innerHTML = ("invalid input, try am again and see if you no go commot this school ")
+            }
+
+        }
+    </script>
+    </center>
+    </body>
+
+</html>
